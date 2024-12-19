@@ -40,6 +40,7 @@
     return thechoice.toUpperCase();
   }
 
+
   let humanScore = 0;
   let computerScore = 0;
 
@@ -58,20 +59,24 @@
       return console.log("You lose! ROCK beats SCISSORS!");
     } else if (computerChoice === "PAPER" && humanChoice === "ROCK" && humanChoice != computerChoice) {
       return console.log("You lose! PAPER beats ROCK!");
-    } else if (computerChoice === "SCISSORS" && humanCholose === "PAPER" && humanChoice != computerChoice) {
+    } else if (computerChoice === "SCISSORS" && humanChoice === "PAPER" && humanChoice != computerChoice) {
       return console.log("You lose! SCISSORS beats PAPER!")
     }
   }
 
-  const humanSelection = getHumanChoice();
-  const computerSelection = getComputerInput();
 
-  playRound(humanSelection, computerSelection);
+  function playGame() {
+    
+    for (i = 0; i < 5; i++) {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerInput();
 
+    playRound(humanSelection, computerSelection);
+    
+  }
+  }
 
-
-
-
+  playGame();
 
 
 
