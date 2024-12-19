@@ -22,13 +22,13 @@
     randomNumber = Math.floor(Math.random() * 3);
 
     if (randomNumber === 0) {
-      return console.log("ROCK");
+      return "ROCK";
     }
     else if (randomNumber === 1) {
-      return console.log("PAPER")
+      return "PAPER";
     }
     else {
-      return console.log("SCISSORS")
+      return "SCISSORS";
     }
 
 
@@ -43,6 +43,8 @@
   let humanScore = 0;
   let computerScore = 0;
 
+
+  //compared the human and computer choices to see who won the round
   function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
       return console.log("Draw!");
@@ -61,7 +63,12 @@
     }
   }
 
-    playRound("PAPER", "ROCK");
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerInput();
+
+  playRound(humanSelection, computerSelection);
+
+
 
 
 
