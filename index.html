@@ -22,24 +22,29 @@
     randomNumber = Math.floor(Math.random() * 3);
 
     if (randomNumber === 0) {
-      return console.log("Rock");
+      return console.log("ROCK");
     }
     else if (randomNumber === 1) {
-      return console.log("Paper")
+      return console.log("PAPER")
     }
     else {
-      return console.log("Scissors")
+      return console.log("SCISSORS")
     }
 
 
   }
 
   function getHumanChoice() {
-    let thechoice = prompt("Choose one: Rock, Paper, or Scissors!");
-    return thechoice;
+    //gets user input or rock, paper, or scissors
+    let thechoice = prompt("Choose one: ROCK, PAPER, or SCISSORS!");
+    return thechoice.toUpperCase();
   }
-
   console.log(getHumanChoice());
+
+
+
+
+
 
 
 
